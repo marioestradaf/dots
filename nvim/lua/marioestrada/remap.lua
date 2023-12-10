@@ -1,8 +1,13 @@
-local map = vim.keymap.set
+--
+-- Mappings
+--
 
+-- Leader key
 vim.g.mapleader = " "
 
-map("n", "<leader>pv", vim.cmd.Ex)
-map("n", "<leader><leader>", function()
-    vim.cmd("so")
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
+-- Exec
+vim.keymap.set("n", "<leader><leader>", function()
+  vim.cmd("so")
 end)

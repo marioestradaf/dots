@@ -1,4 +1,6 @@
 require("marioestrada.remap")
+require("marioestrada.set")
+
 print("Welcome!")
 
 -- disable netrw at the very start of your init.lua

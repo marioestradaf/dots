@@ -3,11 +3,11 @@ local dashboard = require("alpha.themes.dashboard")
 
 math.randomseed(os.time())
 local function pick_color()
-  local colors = {"String", "Identifier", "Keyword", "Number"}
+  local colors = {"Normal", "Comment", "Function", "String", "Keyword", "Operator", "Identifier", "Constant", "Type", "Special", "Number"}
   return colors[math.random(#colors)]
 end
 
-function read(cmd)
+local function read(cmd)
   local handle = io.popen(cmd)
   local result = handle:read("*a")
   handle:close()
@@ -74,6 +74,12 @@ dashboard.section.buttons.val = {
   dashboard.button( "s", "  > Settings" , ":e $MYVIMRC | :cd %:p:h | split . | wincmd k | pwd<CR>"),
   dashboard.button( "q", "  > Quit NVIM", ":qa<CR>"),
 }
+
+-- Set Button highlight
+for _, button in ipairs(dashboard.section.buttons.val) do
+  button.opts.hl = "Constant"
+  button.opts.hl_shortcut = "Comment"
+end
 
 alpha.setup(dashboard.opts)
 

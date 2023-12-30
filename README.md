@@ -1,14 +1,11 @@
-# dots
-My dot files
+# Dotfiles
 
 | Config    | Description                            |
 |-----------|--------------------------------------- | 
 | Alacritty | https://github.com/alacritty/alacritty |
 | NeoVim    | https://neovim.io/                     |
 
-# usage
-I create the symlink to my (macos) user config poiting to the repo:
+## NeoVim
+Cyberpunk inspired start screen.
 
-```bash
-ln -s {path_to}/dots/{config_package}/ /Users/{user_name}/.config/
-```
+<img width="600" alt="image" src="https://github.com/marioestradaf/dots/assets/2767513/4e7bec38-6be2-4dfc-bd57-3e1e26315bf8">

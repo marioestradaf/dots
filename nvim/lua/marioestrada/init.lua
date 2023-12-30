@@ -1,7 +1,7 @@
 require("marioestrada.remap")
 require("marioestrada.set")
-
-print("Welcome!")
+require("marioestrada.alpha")
+require('tokyonight').load()
 
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1

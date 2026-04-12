@@ -2,7 +2,7 @@ env:
   TERM: xterm-256color
 
 font:
-  size: 14
+  size: 12
   normal:
     family: "FiraCode Nerd Font"
     style: Regular
@@ -20,14 +20,14 @@ window:
   # Blank space added around the window in pixels. This padding is not scaled by
   # DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 12
-    y: 12
+    x: 6
+    y: 6
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: false
 
   # Window decorations
-  decorations: buttonless
+  # decorations: buttonless
   #
   # Startup Mode (changes require restart)
   #

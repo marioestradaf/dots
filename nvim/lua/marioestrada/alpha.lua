@@ -3,7 +3,8 @@ local dashboard = require("alpha.themes.dashboard")
 
 math.randomseed(os.time())
 local function pick_color()
-  local colors = {"Normal", "Comment", "Function", "String", "Keyword", "Operator", "Identifier", "Constant", "Type", "Special", "Number"}
+  -- local colors = {"Normal", "Comment", "Function", "String", "Keyword", "Operator", "Identifier", "Constant", "Type", "Special", "Number"}
+  local colors = { "Constant" }
   return colors[math.random(#colors)]
 end
 
@@ -48,7 +49,7 @@ end
 local greeting = getGreeting(username)
 
 local logo = {
-  "+                                                                      +",
+  "+                                                                       +",
   "                                                                        ",
   "   ░░░░░░░░░░░░  "..system:upper().." DATA SYSTEMS             "..machine:upper().." ///////////////",
   "   ░░▒██████▒░░                                                          ",
@@ -77,8 +78,8 @@ dashboard.section.buttons.val = {
 
 -- Set Button highlight
 for _, button in ipairs(dashboard.section.buttons.val) do
-  button.opts.hl = "Constant"
-  button.opts.hl_shortcut = "Comment"
+  button.opts.hl = "Identifier"
+  button.opts.hl_shortcut = "Constant"
 end
 
 alpha.setup(dashboard.opts)
